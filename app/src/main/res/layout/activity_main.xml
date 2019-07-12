@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.heros.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_system_widget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SysWidget"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Event"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_list_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ListView"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_drag_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DragView"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Image"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_image_shap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ImageShap"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_draw_path"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DrawPath"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_anim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Anim"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_system"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="System"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_transition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transi"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_palette"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Palette"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Toolbar"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_ruler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ruler"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_fancy_behavior"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fancy"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="text"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_annotation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="注解"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_optimization"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="优化"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Service"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_tool"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tool"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_web"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Web"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_front_process"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="前台应用"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_58"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="58同城"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_youxin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="优信二手车"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

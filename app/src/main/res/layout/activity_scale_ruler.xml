@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.heros.scaleRuler.ScaleRulerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginTop="15dp">
+
+        <com.example.heros.scaleRuler.DecimalScaleRulerView
+            android:id="@+id/ruler_weight"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_alignParentBottom="true" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="71dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/weight_set_target_arrow" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_user_weight_value_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="65kg"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

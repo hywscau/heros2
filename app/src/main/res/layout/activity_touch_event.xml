@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <com.example.heros.systemWidget.touchEvent.MyViewGroupA
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_bright">
+
+        <com.example.heros.systemWidget.touchEvent.MyViewGroupB
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@android:color/holo_green_dark">
+
+            <com.example.heros.systemWidget.touchEvent.MyView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@android:color/darker_gray" />
+        </com.example.heros.systemWidget.touchEvent.MyViewGroupB>
+
+    </com.example.heros.systemWidget.touchEvent.MyViewGroupA>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Heros</string>
+
+    <string name="header_float_behavior">com.example.heros.fancyBehavior.HeaderFloatBehavior</string>
+    <string name="header_scrolling_behavior">com.example.heros.fancyBehavior.HeaderScrollingBehavior</string>
+
+    <string name="Chinese1">             中   文 </string>
+    <string name="Chinese2">"            中   文 "</string>
+    <string name="accessbiliityNo">请为App打开辅助功能开关！！</string>
+</resources>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.heros">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/> -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <!-- 电话权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission xmlns:tools="http://schemas.android.com/tools"
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".systemWidget.SystemWidgetActivity" />
+        <activity android:name=".systemWidget.touchEvent.TouchEventActivity" />
+        <activity android:name=".listview.ListViewActivity" />
+        <activity android:name=".listview.FlexibleListViewActivity" />
+        <activity android:name=".listview.ScrollHideListViewActivity" />
+        <activity android:name=".customview.DragViewActivity" />
+        <activity android:name=".image.ImageActivity" />
+        <activity android:name=".image.PrimaryColor" />
+        <activity android:name=".image.ColorMatrix" />
+        <activity android:name=".image.PixelsEffect" />
+        <activity android:name=".image.imageshape.ImageShapeActivity" />
+        <activity
+            android:name=".image.imageshape.ImageMatrixTest"
+            android:screenOrientation="portrait" />
+        <activity android:name=".image.imageshape.XfermodeViewTest" />
+        <activity android:name=".image.imageshape.ReflectViewTest" />
+        <activity android:name=".image.imageshape.FlagBitmapMeshTest" />
+        <activity android:name=".image.imageshape.RoundRectTest" />
+        <activity android:name=".customview.drawpath.DrawPathActivity" />
+        <activity android:name=".anim.AnimActivity" />
+        <activity android:name=".anim.PropertyAnimActivity" />
+        <activity android:name=".system.SystemActivity" />
+        <activity android:name=".newFeatureOfL.TransitionActivity" />
+        <activity android:name=".newFeatureOfL.TransitionNewActivity" />
+        <activity android:name=".newFeatureOfL.PaletteActivity" />
+        <activity android:name=".newFeatureOfL.ToolbarActivity" />
+        <activity android:name=".scaleRuler.ScaleRulerActivity" />
+        <activity
+            android:name=".fancyBehavior.FancyBehaviorActivity"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name=".view.ViewActivity" />
+        <activity android:name=".view.BasicViewActivity" />
+        <activity
+            android:name=".view.PaintActivity"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".view.XfermodesActivity"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".view.Paint2Activity"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".view.TextActivity"
+            android:exported="true" />
+        <activity android:name=".view.CanvasActivity" />
+        <activity android:name=".view.RegionClickActivity" />
+        <activity android:name=".text.TextViewActivity" />
+        <activity android:name=".annotation.AnnotationActivity" />
+        <activity android:name=".optimization.OptimizationActivity" />
+        <activity android:name=".view.CalenderActivity" />
+        <activity android:name=".view.pull.PullViewActivity" />
+
+        <service
+            android:name=".service.MyService1"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".service.ServiceActivity" />
+
+        <service
+            android:name=".service.MyService2"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".tool.ToolActivity" />
+
+        <receiver android:name=".tool.phone.PhoneReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.PHONE_STATE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".tool.phone.IncomingCallActivity" />
+
+        <service
+            android:name=".service.MyHandlerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".webview.WebActivity">
+
+            <!-- 需要添加下面的intent-filter配置 -->
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 使用http，则只能打开http开头的网页 -->
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".receiver.AppInstallReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".process.FrontProcessActivity" />
+
+        <service
+            android:name=".process.DetectService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/detection_service_config" />
+        </service>
+
+        <receiver android:name=".tool.DownLoadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".webview.DeepLinkActivity"
+            android:theme="@style/leak_canary_Theme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="blog"
+                    android:path="/appthird"
+                    android:scheme="myScheme"></data>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.CircleActivity"></activity>
+    </application>
+
+</manifest>

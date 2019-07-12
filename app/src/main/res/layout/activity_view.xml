@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.ViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_basic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Basic"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_paint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Paint"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_paint2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Paint2"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Text"
+            android:textAllCaps="false"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_canvas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Canvas"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_xfermodes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Xfermodes"
+            android:textAllCaps="false"/>
+
+
+
+        <Button
+            android:id="@+id/btn_region_click"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Region"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_calender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calender"
+            android:textAllCaps="false"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_pull"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PullView"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_circle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="抽奖"
+            android:textAllCaps="false"/>
+
+
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Region"
+            android:textAllCaps="false"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calender"
+            android:textAllCaps="false"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:text="10"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <com.robinhood.ticker.TickerView
+        android:id="@+id/tickerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_margin="30dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp">
+
+    <com.example.heros.view.GrdientView
+        android:layout_width="300dp"
+        android:layout_height="200dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/test1"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
