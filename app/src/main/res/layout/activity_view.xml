@@ -111,11 +111,12 @@
 
 
 
-        <android.support.v4.widget.Space
+        <Button
+            android:id="@+id/btn_toast"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Region"
+            android:text="Toast"
             android:textAllCaps="false"/>
 
         <android.support.v4.widget.Space
@@ -154,6 +155,7 @@
 
     <com.example.heros.view.GrdientView
         android:layout_width="300dp"
+        android:visibility="gone"
         android:layout_height="200dp" />
 
         <ImageView

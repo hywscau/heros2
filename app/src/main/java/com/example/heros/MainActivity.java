@@ -2,21 +2,14 @@ package com.example.heros;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.widget.Toast;
 
 import com.example.heros.anim.AnimActivity;
 import com.example.heros.annotation.AnnotationActivity;
@@ -43,12 +36,6 @@ import com.example.heros.text.TextViewActivity;
 import com.example.heros.tool.ToolActivity;
 import com.example.heros.view.ViewActivity;
 import com.example.heros.webview.WebActivity;
-import com.tencent.mm.opensdk.modelbiz.WXLaunchMiniProgram;
-import com.tencent.mm.opensdk.openapi.IWXAPI;
-import com.tencent.mm.opensdk.openapi.WXAPIFactory;
-
-import java.util.ArrayList;
-import java.util.TimerTask;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -202,7 +189,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn_front_process:
                 intent = new Intent(MainActivity.this, FrontProcessActivity.class);
-//                getUserAgentNew(this);
                 break;
             case R.id.btn_58:
                 try {
@@ -241,40 +227,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         startActivity(intent2);
 
     }
-
-    private static final String DEFAULT_UA = "Mozilla/5.0 (Linux; U; Android 1.1; en-gb; dream) " +
-            "AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2 – G1 Phone";//ua默认值
-
-    public static String getUserAgentNew(Context context) {
-        Log.e("hyw","getDefaultUserAgent");
-        String userAgent = "";
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            try {
-
-                userAgent = WebSettings.getDefaultUserAgent(context);
-
-            } catch (Exception e) {
-                userAgent = System.getProperty("http.agent");
-                if (TextUtils.isEmpty(userAgent))
-                    userAgent = DEFAULT_UA;
-            }
-        } else {
-            userAgent = System.getProperty("http.agent");
-        }
-        //中文过滤
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0, length = userAgent.length(); i < length; i++) {
-            char c = userAgent.charAt(i);
-            if (c <= '\u001f' || c >= '\u007f') {
-                sb.append(String.format("\\u%04x", (int) c));
-            } else {
-                sb.append(c);
-            }
-        }
-        Log.e("hyw","getDefaultUserAgent end");
-        return sb.toString();
-    }
-
 
 
     @Override

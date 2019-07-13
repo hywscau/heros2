@@ -8,12 +8,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.heros.R;
 import com.example.heros.image.imageshape.XfermodeView;
@@ -23,8 +28,11 @@ import com.robinhood.ticker.TickerView;
 
 import org.w3c.dom.Text;
 
+import java.lang.reflect.Field;
 import java.util.Locale;
 import java.util.Stack;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ViewActivity extends Activity implements View.OnClickListener {
 
@@ -48,6 +56,7 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.btn_calender).setOnClickListener(this);
         findViewById(R.id.btn_pull).setOnClickListener(this);
         findViewById(R.id.btn_circle).setOnClickListener(this);
+        findViewById(R.id.btn_toast).setOnClickListener(this);
 
 
         mSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
@@ -73,52 +82,6 @@ public class ViewActivity extends Activity implements View.OnClickListener {
 
         measure();
         measure2();
-
-        tv_data = findViewById(R.id.tv_data);
-        curTranslationY = tv_data.getTranslationY();
-        ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(tv_data, "alpha", 1f, 0f);
-        animator = ObjectAnimator.ofFloat(tv_data, "translationY", curTranslationY, curTranslationY-150);
-        set = new AnimatorSet();
-        set.play(animator).with(fadeInOut);
-        set.setDuration(200);
-        set.start();
-//        animator.setDuration(2000);
-        set.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-//                tv_data.setAlpha(1);
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                Log.e("hyw","onAnimationEnd");
-                if(data++<20) {
-                    tv_data.setAlpha(0);
-                    tv_data.setText(data+"");
-                    set.start();;
-                } else {
-                    tv_data.setAlpha(1);
-                    ObjectAnimator animator = ObjectAnimator.ofFloat(tv_data, "translationY", curTranslationY, curTranslationY);
-                    animator.start();
-                }
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        });
-        animator.start();;
-
-       tickerView = findViewById(R.id.tickerView);
-        tickerView.setCharacterList(TickerUtils.getDefaultNumberList());
-        tickerView.setText("50" );
-        tickerView.setAnimationDuration(2000);
     }
 
     int data = 10;
@@ -191,9 +154,11 @@ public class ViewActivity extends Activity implements View.OnClickListener {
             case R.id.btn_circle:
                 intent.setClass(ViewActivity.this, CircleActivity.class);
                 break;
+            case R.id.btn_toast:
+                new ToastUtils(ViewActivity.this).showWithTime(10000);
+                return;
         }
-//        startActivity(intent);
-        tickerView.setText("200" );
+        startActivity(intent);
     }
     int i ;
 
