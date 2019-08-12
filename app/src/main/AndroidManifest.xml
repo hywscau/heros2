@@ -182,7 +182,7 @@
 
         <activity
             android:name=".webview.DeepLinkActivity"
-            android:theme="@style/leak_canary_Theme.Transparent">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
