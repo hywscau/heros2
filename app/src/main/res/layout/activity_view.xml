@@ -135,12 +135,20 @@
 
     <TextView
         android:id="@+id/tv_data"
-        android:text="10"
-        android:textSize="30sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="10"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_html"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="html"
+        android:textSize="18sp" />
+
 
 
     <com.robinhood.ticker.TickerView
@@ -153,12 +161,19 @@
         android:layout_width="300dp"
         android:layout_height="200dp">
 
+        <FrameLayout
+            android:id="@+id/fl_bg"
+            android:layout_width="100dp"
+            android:background="#666666"
+            android:layout_height="100dp"></FrameLayout>
+
     <com.example.heros.view.GrdientView
         android:layout_width="300dp"
         android:visibility="gone"
         android:layout_height="200dp" />
 
         <ImageView
+            android:id="@+id/iv_pic"
             android:layout_width="match_parent"
             android:padding="10dp"
             android:src="@drawable/test1"
@@ -167,6 +182,8 @@
             android:layout_height="match_parent" />
 
     </RelativeLayout>
+
+
 
 
 </LinearLayout>
